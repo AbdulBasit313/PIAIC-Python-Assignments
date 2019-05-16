@@ -6,11 +6,10 @@ print('-' * 40) # for formation
 
 # student info
 name = input('Name: ')
-roll_no = input('Roll No: ') 
+roll_no = int(input('Roll No: ')) 
 
-# total marks per subject
-mathematics_marks = physics_marks = chemistry_marks = islamiat_marks = 100
-urdu_marks = 75
+# total marks per subject, assigned multiple variables in one line
+mathematics_marks, physics_marks, chemistry_marks, islamiat_marks, urdu_marks = 100, 100, 100, 100, 75
 
 # input
 mathematics = int(input(f'Mathematics marks out of {mathematics_marks}: '))
@@ -22,7 +21,7 @@ islamiat = int(input(f'Islamiat marks out of {islamiat_marks}: '))
 # calculating total marks, obtained marks and percentage
 total_marks = mathematics_marks + physics_marks + chemistry_marks + islamiat_marks + urdu_marks
 obtained_marks = mathematics + chemistry + physics + urdu + islamiat
-percentage = obtained_marks / total_marks * 100
+percentage = round(obtained_marks / total_marks * 100, 2) # round to two decimal point
 
 # defining variables for grades
 grade_A = 90
@@ -31,7 +30,7 @@ grade_C = 70
 grade_D = 60
 grade_F = 60
 
-print('*' * 40) # for formation
+print('*' * 40) # for formation TODO: change the  * sign
 
 # output
 print(f'Name: {name}       Roll No: {roll_no }')
