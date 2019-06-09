@@ -3,7 +3,6 @@
 def prime_num():
    value = int(input('please type a number: '))
    for num in range(2,value):
-      print(num)
       if value % num == 0:
          return f'{value} is not a prime number'
    return f'{value} is a prime number'
